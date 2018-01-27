@@ -21,14 +21,13 @@ $(TESTER): $(OBJS) test.o
 	$(CC) $(CFLAGS) -c -o $@ $^
 
 ###
-
-clean:
-	$(RM) *.o
-	$(RM) $(TARGET)
-	$(RM) $(TESTER)
-
 run: $(TARGET)
 	./$(TARGET)
 
 test: $(TESTER)
 	./$(TESTER)
+
+clean:
+	$(RM) *.o
+	$(RM) $(TARGET)
+	$(RM) $(TESTER)
